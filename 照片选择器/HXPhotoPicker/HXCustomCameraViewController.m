@@ -105,7 +105,7 @@
     if (self.manager.configuration.navigationBar) {
         self.manager.configuration.navigationBar(self.customNavigationBar, self);
     }
-    [UINavigationBar appearance].translucent = YES;
+//     [UINavigationBar appearance].translucent = YES;
 }
 - (void)setupImageOutput {
     [self.cameraController initImageOutput];
@@ -310,9 +310,9 @@
         if (self.cancelBlock) {
             self.cancelBlock(self);
         }
-        if (self.manager.configuration.restoreNavigationBar && self.isOutside) {
-            [UINavigationBar appearance].translucent = NO;
-        }
+//         if (self.manager.configuration.restoreNavigationBar && self.isOutside) {
+//             [UINavigationBar appearance].translucent = NO;
+//         }
         [self dismissViewControllerAnimated:YES completion:nil];
     }
 }
@@ -370,9 +370,9 @@
     if (self.doneBlock) {
         self.doneBlock(model, self);
     }
-    if (self.manager.configuration.restoreNavigationBar && self.isOutside) {
-        [UINavigationBar appearance].translucent = NO;
-    }
+//     if (self.manager.configuration.restoreNavigationBar && self.isOutside) {
+//         [UINavigationBar appearance].translucent = NO;
+//     }
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 - (void)didchangeCameraClick {
