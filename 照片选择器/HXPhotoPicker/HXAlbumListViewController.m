@@ -79,7 +79,7 @@ UITableViewDelegate
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(deviceOrientationChanged:) name:UIApplicationDidChangeStatusBarOrientationNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(customCameraViewControllerDidDoneClick) name:@"CustomCameraViewControllerDidDoneNotification" object:nil];
     
-    [UINavigationBar appearance].translucent = YES;
+//     [UINavigationBar appearance].translucent = YES;
 }
 - (void)customCameraViewControllerDidDoneClick {
     NSInteger i = 0;
@@ -166,7 +166,7 @@ UITableViewDelegate
 }
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    [UINavigationBar appearance].translucent = YES;
+//     [UINavigationBar appearance].translucent = YES;
     [self changeStatusBarStyle];
 }
 - (void)changeStatusBarStyle {
@@ -244,9 +244,9 @@ UITableViewDelegate
     self.manager.selectPhotoing = NO;
     
     [self dismissViewControllerAnimated:YES completion:nil];
-    if (self.manager.configuration.restoreNavigationBar) {
-        [UINavigationBar appearance].translucent = NO;
-    }
+//     if (self.manager.configuration.restoreNavigationBar) {
+//         [UINavigationBar appearance].translucent = NO;
+//     }
 }
 #pragma mark - < HXPhotoViewControllerDelegate >
 - (void)photoViewController:(HXPhotoViewController *)photoViewController didDoneAllList:(NSArray<HXPhotoModel *> *)allList photos:(NSArray<HXPhotoModel *> *)photoList videos:(NSArray<HXPhotoModel *> *)videoList original:(BOOL)original {
