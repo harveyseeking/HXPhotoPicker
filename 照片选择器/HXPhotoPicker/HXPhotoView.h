@@ -276,6 +276,8 @@ typedef void (^HXPhotoViewLongGestureRecognizerEndedBlock)(UILongPressGestureRec
 /// default is UICollectionViewScrollDirectionVertical
 /// 重新设置需要调用 refreshView 刷新界面
 @property (nonatomic) UICollectionViewScrollDirection scrollDirection;
+/// 只使用相机
+@property (assign, nonatomic) BOOL onlyCamera;
 /**  是否把相机功能放在外面 默认NO  */
 @property (assign, nonatomic) BOOL outerCamera;
 /** 每行个数 默认 3
