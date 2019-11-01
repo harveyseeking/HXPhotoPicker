@@ -406,6 +406,20 @@
     if (!self.manager.cameraRollAlbumModel) {
         [self.manager preloadData];
     }
+    if (self.onlyCamera) {
+        if (self.manager.type == HXPhotoManagerSelectedTypePhoto) {
+            self.manager.configuration.maxNum = self.manager.configuration.photoMaxNum;
+        }else if (self.manager.type == HXPhotoManagerSelectedTypeVideo) {
+            self.manager.configuration.maxNum = self.manager.configuration.videoMaxNum;
+        }else {
+            // 防错
+            if (self.manager.configuration.videoMaxNum + self.manager.configuration.photoMaxNum != self.manager.configuration.maxNum) {
+                self.manager.configuration.maxNum = self.manager.configuration.videoMaxNum + self.manager.configuration.photoMaxNum;
+            }
+        }
+        [self goCameraViewController];
+        return;
+    }
     if (self.outerCamera) {
         if (self.manager.type == HXPhotoManagerSelectedTypePhoto) {
             if (self.manager.configuration.photoMaxNum > 0) {
