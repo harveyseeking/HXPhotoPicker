@@ -119,9 +119,9 @@
 }
 
 - (void)dealloc {
-    if (self.manager.configuration.restoreNavigationBar) {
-        [UINavigationBar appearance].translucent = NO;
-    }
+//     if (self.manager.configuration.restoreNavigationBar) {
+//         [UINavigationBar appearance].translucent = NO;
+//     }
     self.manager.selectPhotoing = NO;
     [self.manager removeAllTempList];
     [self.manager removeAllAlbum];
