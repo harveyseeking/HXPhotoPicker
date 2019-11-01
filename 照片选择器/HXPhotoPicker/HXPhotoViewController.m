@@ -119,7 +119,7 @@ HXVideoEditViewControllerDelegate
 }
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    [UINavigationBar appearance].translucent = YES;
+//     [UINavigationBar appearance].translucent = YES;
     [self changeStatusBarStyle];
     if (self.needChangeViewFrame) {
         self.needChangeViewFrame = NO;
@@ -165,7 +165,7 @@ HXVideoEditViewControllerDelegate
                 [weakSelf.view addSubview:weakSelf.authorizationLb];
             }
         }];
-        [UINavigationBar appearance].translucent = YES;
+//         [UINavigationBar appearance].translucent = YES;
     }
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(deviceOrientationChanged:) name:UIApplicationDidChangeStatusBarOrientationNotification object:nil];
 }
@@ -385,9 +385,9 @@ HXVideoEditViewControllerDelegate
     }
     self.manager.selectPhotoing = NO;
     [self dismissViewControllerAnimated:YES completion:nil];
-    if (self.manager.configuration.restoreNavigationBar) {
-        [UINavigationBar appearance].translucent = NO;
-    }
+//     if (self.manager.configuration.restoreNavigationBar) {
+//         [UINavigationBar appearance].translucent = NO;
+//     }
 }
 - (NSInteger)dateItem:(HXPhotoModel *)model {
     NSInteger dateItem = model.dateItem;
@@ -1371,9 +1371,9 @@ HXVideoEditViewControllerDelegate
     [self cleanSelectedList];
     self.manager.selectPhotoing = NO;
     [self dismissViewControllerAnimated:YES completion:nil];
-    if (self.manager.configuration.restoreNavigationBar) {
-        [UINavigationBar appearance].translucent = NO;
-    }
+//     if (self.manager.configuration.restoreNavigationBar) {
+//         [UINavigationBar appearance].translucent = NO;
+//     }
 }
 - (void)photoBottomViewDidEditBtn {
     HXPhotoModel *model = self.manager.selectedArray.firstObject;
