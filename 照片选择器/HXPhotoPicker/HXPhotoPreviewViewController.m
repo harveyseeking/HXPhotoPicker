@@ -164,7 +164,7 @@ HXVideoEditViewControllerDelegate
 }
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    [UINavigationBar appearance].translucent = YES;
+//     [UINavigationBar appearance].translucent = YES;
     [self changeStatusBarStyle];
     if (self.exteriorPreviewStyle == HXPhotoViewPreViewShowStyleDark) {
         [self changeStatusBarWithHidden:YES];
@@ -585,9 +585,9 @@ HXVideoEditViewControllerDelegate
         [self.delegate photoPreviewControllerDidCancel:self model:model];
     }
     [self dismissViewControllerAnimated:YES completion:nil];
-    if (self.manager.configuration.restoreNavigationBar) {
-        [UINavigationBar appearance].translucent = NO;
-    }
+//     if (self.manager.configuration.restoreNavigationBar) {
+//         [UINavigationBar appearance].translucent = NO;
+//     }
 }
 - (void)deleteClick {
     if (!self.modelArray.count) {
@@ -929,9 +929,9 @@ HXVideoEditViewControllerDelegate
     }
 }
 - (void)photoPreviewBottomViewDidDone:(HXPhotoPreviewBottomView *)bottomView {
-    if (self.manager.configuration.restoreNavigationBar) {
-        [UINavigationBar appearance].translucent = NO;
-    }
+//     if (self.manager.configuration.restoreNavigationBar) {
+//         [UINavigationBar appearance].translucent = NO;
+//     }
     if (self.outside) {
         if ([self.delegate respondsToSelector:@selector(photoPreviewControllerDidCancel:model:)]) {
             HXPhotoModel *model;
@@ -942,9 +942,9 @@ HXVideoEditViewControllerDelegate
         }
         self.manager.selectPhotoing = NO;
         [self dismissViewControllerAnimated:YES completion:nil];
-        if (self.manager.configuration.restoreNavigationBar) {
-            [UINavigationBar appearance].translucent = NO;
-        }
+//         if (self.manager.configuration.restoreNavigationBar) {
+//             [UINavigationBar appearance].translucent = NO;
+//         }
         return;
     }
     if (self.modelArray.count == 0) {
